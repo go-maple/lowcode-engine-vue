@@ -1,0 +1,148 @@
+{
+  "packages": [
+    {
+      "package": "vue",
+      "version": "3.2.33",
+      "urls": ["https://cdn.bootcdn.net/ajax/libs/vue/3.2.33/vue.global.prod.min.js"],
+      "library": "Vue"
+    },
+    {
+      "package": "vue-router",
+      "version": "4.0.14",
+      "urls": [
+        "https://cdn.bootcdn.net/ajax/libs/vue-router/4.0.14/vue-router.global.prod.min.js"
+      ],
+      "library": "Vue"
+    },
+    {
+      "package": "moment",
+      "version": "2.24.0",
+      "urls": ["https://g.alicdn.com/mylib/moment/2.24.0/min/moment.min.js"],
+      "library": "moment"
+    },
+    {
+      "package": "lodash",
+      "library": "_",
+      "urls": ["https://g.alicdn.com/platform/c/lodash/4.6.1/lodash.min.js"]
+    },
+    {
+      "title": "fusion组件库",
+      "package": "@alifd/next",
+      "version": "1.23.0",
+      "urls": [
+        "https://g.alicdn.com/code/lib/alifd__next/1.23.18/next.min.css",
+        "https://g.alicdn.com/code/lib/alifd__next/1.23.18/next-with-locales.min.js"
+      ],
+      "library": "Next"
+    },
+    {
+      "package": "@knx/kui",
+      "version": "1.0.0",
+      "urls": ["http://localhost:5557/unpkg/kui.min.js"],
+      "library": "Kui"
+    }
+  ],
+  "components": [
+    {
+      "componentName": "KAvatar",
+      "title": "头像",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.x",
+        "exportName": "KAvatar",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "src",
+          "propType": "string"
+        },
+        {
+          "name": "circle",
+          "propType": "bool"
+        },
+        {
+          "name": "round",
+          "propType": "bool"
+        },
+        {
+          "name": "bordered",
+          "propType": "bool"
+        },
+        {
+          "name": "class",
+          "propType": "string"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        },
+        {
+          "name": "onError",
+          "propType": "func",
+          "description": "图片加载失败的事件，返回 false 会关闭组件默认的 fallback 行为"
+        },
+        {
+          "name": "size",
+          "propType": {
+            "type": "oneOf",
+            "value": ["small", "medium", "large"]
+          },
+          "description": "头像的大小",
+          "defaultValue": "medium"
+        }
+      ],
+      "configure": {
+        "component": {
+          "isContainer": false
+        },
+        "props": {
+          "isExtends": true,
+          "override": [
+            {
+              "name": "src",
+              "title": "头像路径",
+              "setter": {
+                "componentName": "StringSetter"
+              }
+            },
+            {
+              "name": "class",
+              "setter": {
+                "componentName": "ClassNameSetter"
+              }
+            }
+          ]
+        }
+      },
+      "category": "基础组件"
+    }
+  ],
+  "componentList": [
+    {
+      "title": "基础组件",
+      "icon": "",
+      "children": [
+        {
+          "componentName": "KAvatar",
+          "library": "@knx/kui",
+          "title": "头像",
+          "snippets": [
+            {
+              "title": "头像",
+              "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_avatar.png",
+              "schema": {
+                "componentName": "KAvatar",
+                "props": {
+                  "circle": true,
+                  "round": false,
+                  "size": "medium"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

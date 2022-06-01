@@ -1,0 +1,29 @@
+{
+  "name": "@knx/vue-simulator-renderer",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "build-scripts start --disable-reload --port 5558"
+  },
+  "devDependencies": {
+    "@alilc/lowcode-designer": "^1.0.8",
+    "@alilc/lowcode-types": "^1.0.8",
+    "@types/debug": "^4.1.7",
+    "@types/lodash": "^4.14.182",
+    "vue": "^3.2.35",
+    "vue-router": "^4.0.15"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@alifd/meet-react",
+        "moment"
+      ]
+    }
+  },
+  "dependencies": {
+    "@alilc/lowcode-utils": "^1.0.8",
+    "core-js": "^3.22.7",
+    "debug": "^4.3.4",
+    "intl-messageformat": "^10.0.1"
+  }
+}
